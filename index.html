@@ -1,0 +1,64 @@
+<html>
+    <head>
+	<title>Raspberry Pi Weather Station</title>
+	
+<style>
+body {
+	background-image: url("/static/images/pilvet.jpg");
+	background-size: 1900px 1900px;
+	text-align: center;
+	color:#ffdeec;
+	font-size:20px;
+	}
+h2 {border: 5px inset #d5a1d6;
+  padding: 30px;
+  color: #e6ceed;
+  font-style: oblique;
+  }
+h3 {
+	text-decoration: underline;
+}
+</style>
+</head>
+   <body>
+        <h1>Raspberry Pi Weather Station</h1>
+		
+		<h3> Compass point: {{ ilmansuunta }}</h3>
+        <h2>Temperature</h2>
+        <p><strong>Celcius:</strong> {{ temp }}</p>
+        <p> {{ arvo }} </p>
+        
+        
+        <h2>Humidity</h2>
+        <p><strong>Value:</strong> {{ kosteus }} % </p>
+        <p> {{ kostarvo }} </p>
+        
+        <h2>Pressure</h2>
+        <p><strong>hPa:</strong> {{ paine }}</p>
+        <p> {{ painearvo }} </p>
+        
+        <h2>Date</h2>
+        <p>{{ date }} {{ clock }}</p>
+        
+        <h1> Raspberry Pi Averages</h1>
+        
+        
+        <h2>Averages today</h2>
+        <p> Temperature avg: {{ mytemp }} </p>
+        <p> Humidity avg: {{ myhum }}</p>
+        <p> Pressure avg: {{ mypres }}</p>
+        
+        <h2>Averages yesterday</h2>
+        <p> Temperature: {{ yetemp }}</p>
+        <p> Humidity: {{ yehum }}</p>
+        <p> Pressure: {{ yepres }}</p>
+        
+        <h2> Averages two days ago</h2>
+        <p> Temperature: {{ twotemp }}</p>
+        <p> Humidity: {{ twohum }} </p>
+        <p> Pressure: {{ twopres }} </p>
+        
+        
+         
+    </body>
+</html> 
